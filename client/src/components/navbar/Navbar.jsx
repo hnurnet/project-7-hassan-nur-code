@@ -7,14 +7,24 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { AuthContext } from "../../context/authContext";
+import { Nav, NavDropdown } from 'react-bootstrap';
 
 const Navbar = ({data}) => {
   const { toggle, darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
+  const navigate = useNavigate;
+  
+
+  function logOut() {
+    localStorage.clear();
+    navigate.push("/register")
+
+
+  }
 
   return (
     <div className="navbar">
@@ -39,11 +49,18 @@ const Navbar = ({data}) => {
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
-          <img
-            src={currentUser.profilePic}
-            alt=""
-          />
-          <span>{currentUser.name}</span>
+          <Nav>
+            <NavDropdown title={currentUser.username}>
+            <Link to="/" onClick={logOut} >Logout</Link>
+            
+              
+            
+
+            </NavDropdown>
+
+          </Nav>
+          
+          <span></span>
         </div>
       </div>
     </div>
