@@ -30,7 +30,7 @@ const Navbar = ({data}) => {
     <div className="navbar">
       <div className="left">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span>CONNECT-E</span>
+          <div><img src="./images/icon-left-font-monochrome-black.png" alt="logo" style={{ width: '200px', }}/></div>
         </Link>
         <HomeOutlinedIcon />
         {darkMode ? (
@@ -51,7 +51,7 @@ const Navbar = ({data}) => {
         <div className="user">
           <Nav>
             <NavDropdown title={currentUser.username}>
-            <Link to="/" onClick={logOut} >Logout</Link>
+            <Link to="/" onClick={logOut} style={{ textDecoration: "none" }}>Logout</Link>
             
               
             

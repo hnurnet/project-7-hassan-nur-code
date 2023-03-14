@@ -20,8 +20,14 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
+import HarryPotterImage from './assets/icon-left-font-monochrome-black.png';
 
 function App() {
+
+  
+
+
+
   const {currentUser} = useContext(AuthContext);
 
   const { darkMode } = useContext(DarkModeContext);

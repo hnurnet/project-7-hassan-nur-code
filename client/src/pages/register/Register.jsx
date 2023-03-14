@@ -51,6 +51,7 @@ const Register = () => {
           </Link>
           </form>
         </div>
+        <div className="left"><img src="./images/icon-left-font-monochrome-white.png" alt="logo" style={{ width: '200px',}}/></div>
       </div>
     </div>
   );

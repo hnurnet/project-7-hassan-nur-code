@@ -32,10 +32,14 @@ const Login = () => {
   };
 
   return (
+    
+
     <div className="login">
+      
       <div className="card">
-        
+      
         <div className="right">
+          
           <h1>Login</h1>
           <form>
             <input type="text" placeholder="Username" name="username" onChange={handleChange}/>
@@ -48,6 +52,7 @@ const Login = () => {
           </Link>
           </form>
         </div>
+        <div className="left"><img src="./images/icon-left-font-monochrome-white.png" alt="logo" style={{ width: '160px',}}/></div>
       </div>
     </div>
   );
